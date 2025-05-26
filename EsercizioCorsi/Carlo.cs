@@ -1,59 +1,5 @@
 using System;
 
-// Classe astratta che rappresenta un corso generico
-public abstract class Corso
-{
-    private string _titolo;
-    private int _durataOre;
-
-    // Proprietà per il titolo del corso
-    public string Titolo
-    {
-        get
-        {
-            return _titolo;
-        }
-        set
-        {
-            _titolo = value;
-        }
-    }
-
-    // Proprietà per la durata del corso in ore
-    public int DuratoOre
-    {
-        get
-        {
-            return _durataOre;
-        }
-        set
-        {
-            // Correzione: assegnare il valore solo se > 0
-            if (value > 0)
-            {
-                _durataOre = value;
-            }
-            else
-            {
-                Console.WriteLine("Durata ore non valida");
-            }
-        }
-    }
-
-    // Metodo astratto per erogare il corso
-    public abstract void ErogaCorso();
-
-    // Metodo astratto per stampare i dettagli del corso
-    public abstract void StampaDettagli();
-
-    // Costruttore della classe Corso
-    public Corso(string _titolo, int _durataOre)
-    {
-        Titolo = _titolo;
-        DuratoOre = _durataOre;
-    }
-}
-
 // Classe che rappresenta un corso online, derivata da Corso
 public class CorsoOnline : Corso
 {
