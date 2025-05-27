@@ -6,6 +6,7 @@ public class Program
     {
         List<Corso> corsi = new List<Corso>();
 
+
         bool x = true;
 
         do
@@ -82,7 +83,7 @@ public class Program
         Console.WriteLine("Inserisci l'età: ");
         int eta = int.Parse(Console.ReadLine());
 
-        corsi[scelta-1].studenti.Add(new Studente(nome,eta));
+        corsi[scelta-1].Studenti.Add(new Studente(nome,eta));
     }
     //metodo ErogaCorsi
     public static void ErogaCorsi(List<Corso> corsi)
@@ -91,7 +92,7 @@ public class Program
         foreach (Corso corso in corsi)
         {
             Console.WriteLine(count);
-            corso.ErogaCorso(corso.studenti);
+            corso.ErogaCorso(corso.Studenti);
             count++;
         }
     }

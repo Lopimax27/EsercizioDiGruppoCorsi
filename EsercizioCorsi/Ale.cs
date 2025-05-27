@@ -4,19 +4,19 @@ public abstract class Corso
 {
     private string _titolo;
     private int _durataOre;
-    public List<Studente> studenti;
+    private List<Studente> _studenti;
 
-    // public List<Studente> Studenti
-    // {
-    //     get
-    //     {
-    //         return _studenti;
-    //     }
-    //     set
-    //     {
-    //         _studenti = value;
-    //     }   
-    // }
+    public List<Studente> Studenti
+    {
+        get
+        {
+            return _studenti;
+        }
+        set
+        {
+            _studenti = value;
+        }   
+    }
 
     public string Titolo
     {
