@@ -37,10 +37,10 @@ Progettare un’applicazione che gestisca un **ente formativo** in grado di offr
 ---
 
 ## 🛠️ Struttura del progetto
-├── Corso.cs // Classe astratta
-├── CorsoInPresenza.cs // Classe derivata per corsi in aula
-├── CorsoOnline.cs // Classe derivata per corsi online
-├── Program.cs // Entry point con test e demo
+Corso.cs // Classe astratta
+CorsoInPresenza.cs // Classe derivata per corsi in aula
+CorsoOnline.cs // Classe derivata per corsi online
+Program.cs // Entry point con test e demo
 
 ---
 
@@ -54,7 +54,7 @@ Progettare un’applicazione che gestisca un **ente formativo** in grado di offr
     dotnet run
 
 
-📚 Concetti chiave:
+## 📚 Concetti chiave:
 
 -🧱 Astrazione
 
@@ -64,5 +64,5 @@ Progettare un’applicazione che gestisca un **ente formativo** in grado di offr
 
 -🔁 Polimorfismo
 
-✍️ I CAMPIONI:
+## ✍️ I CAMPIONI:
 Alessandro Lopardo, Andrea Fabbri, Carlo Condello, Simone Addesso
