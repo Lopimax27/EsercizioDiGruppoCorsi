@@ -1,9 +1,11 @@
-﻿public class Program
+﻿using System;
+
+public class Program
 {
     public static void Main()
     {
         List<Corso> corsi = new List<Corso>();
-        List<Studente> studenti = new List<Studente>();
+
 
         bool x = true;
 
@@ -47,7 +49,7 @@
         Console.WriteLine("Il corso è online o in presenza 1/2");
         int scelta = int.Parse(Console.ReadLine());
 
-        if (scelta == 1)
+        if (scelta == 2)
         {
             Console.WriteLine("Inserisci l'aula del corso: ");
             string aula = Console.ReadLine();
@@ -56,7 +58,7 @@
 
             return new CorsoInPresenza(titolo, durata,new List<Studente>(), aula, numero);
         }
-        else if (scelta == 2)
+        else if (scelta == 1)
         {
             Console.WriteLine("Inserisci la piattaforma: ");
             string piattaforma = Console.ReadLine();
@@ -83,7 +85,6 @@
 
         corsi[scelta-1].Studenti.Add(new Studente(nome,eta));
     }
-
     public static void ErogaCorsi(List<Corso> corsi)
     {
         int count = 0;
