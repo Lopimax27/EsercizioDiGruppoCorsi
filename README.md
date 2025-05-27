@@ -37,10 +37,10 @@ Progettare un’applicazione che gestisca un **ente formativo** in grado di offr
 ---
 
 ## 🛠️ Struttura del progetto
--Corso.cs // Classe astratta
--CorsoInPresenza.cs // Classe derivata per corsi in aula
--CorsoOnline.cs // Classe derivata per corsi online
--Program.cs // Entry point con test e demo
+- Corso.cs // Classe astratta
+- CorsoInPresenza.cs // Classe derivata per corsi in aula
+- CorsoOnline.cs // Classe derivata per corsi online
+- Program.cs // Entry point con test e demo
 
 ---
 
