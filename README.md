@@ -37,10 +37,10 @@ Progettare un’applicazione che gestisca un **ente formativo** in grado di offr
 ---
 
 ## 🛠️ Struttura del progetto
-Corso.cs // Classe astratta
-CorsoInPresenza.cs // Classe derivata per corsi in aula
-CorsoOnline.cs // Classe derivata per corsi online
-Program.cs // Entry point con test e demo
+-Corso.cs // Classe astratta
+-CorsoInPresenza.cs // Classe derivata per corsi in aula
+-CorsoOnline.cs // Classe derivata per corsi online
+-Program.cs // Entry point con test e demo
 
 ---
 
@@ -48,10 +48,10 @@ Program.cs // Entry point con test e demo
 
 1. Clona la repository:
 
-    git clone https://github.com/Lopimax27/EsercizioDiGruppoCorsi.git
-    cd EsercizioDiGruppoCorsi
-    Apri la soluzione con Visual Studio oppure esegui:
-    dotnet run
+-git clone https://github.com/Lopimax27/EsercizioDiGruppoCorsi.git
+-cd EsercizioDiGruppoCorsi
+-Apri la soluzione con Visual Studio oppure esegui:
+-dotnet run
 
 
 ## 📚 Concetti chiave:
