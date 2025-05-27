@@ -14,7 +14,7 @@ public abstract class Corso
         }
         set
         {
-            value = _studenti;
+            _studenti = value;
         }   
     }
 
@@ -39,7 +39,7 @@ public abstract class Corso
         {
             if (value > 0)
             {
-                value = _durataOre;
+                _durataOre = value;
             }
             else
             {
