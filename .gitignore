@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+/EsercizioCorsi/obj
+/EsercizioCorsi/bin
+/EsercizioCorsi/obj
