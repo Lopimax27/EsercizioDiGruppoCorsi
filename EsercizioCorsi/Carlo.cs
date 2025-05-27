@@ -45,7 +45,7 @@ public class CorsoOnline : Corso
     // Override del metodo per stampare i dettagli del corso online
     public override void StampaDettagli()
     {
-        Console.WriteLine($"Il corso viene erogato sulla piattaforma {Piattaforma} con {LinkAccesso} utilizzato come link d'accesso");
+        Console.WriteLine($"Il corso {Titolo} viene erogato sulla piattaforma {Piattaforma} con {LinkAccesso} utilizzato come link d'accesso");
     }
 
     // Costruttore della classe CorsoOnline
