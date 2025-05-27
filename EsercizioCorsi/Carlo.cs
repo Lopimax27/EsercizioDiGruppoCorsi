@@ -21,7 +21,7 @@ public class CorsoOnline : Corso
     public override void ErogaCorso(List<Studente> studenti)
     {
         // Lista studenti locale (vuota, da implementare)
-        
+
         Console.WriteLine("Lista studenti:");
         for (int i = 0; i < studenti.Count; i++)
         {
@@ -45,7 +45,7 @@ public class CorsoOnline : Corso
     // Override del metodo per stampare i dettagli del corso online
     public override void StampaDettagli()
     {
-        Console.WriteLine($"Il corso viene erogato sulla piattaforma {Piattaforma} con {LinkAccesso} utilizzato come link d'accesso");
+        Console.WriteLine($"Il corso {Titolo} viene erogato sulla piattaforma {Piattaforma} con {LinkAccesso} utilizzato come link d'accesso");
     }
 
     // Costruttore della classe CorsoOnline
@@ -54,4 +54,5 @@ public class CorsoOnline : Corso
         Piattaforma = piattaforma;
         LinkAccesso = linkAccesso;
     }
-}
+} 
+//fate il main caspio
