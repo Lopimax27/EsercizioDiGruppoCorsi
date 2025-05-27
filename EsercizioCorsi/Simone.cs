@@ -146,3 +146,26 @@ public class Studente
         return $"Nome: {Nome} | Età: {Eta}";
     }
 }
+
+public class Docente
+{
+    private string _nome, _materia;
+
+    public string Nome
+    {
+        get { return _nome; }
+        set { _nome = value; }
+    }
+
+    public string Materia
+    {
+        get { return _materia; }
+        set { _materia = value; }
+    }
+
+    public Docente(string nome, string materia)
+    {
+        Nome = nome;
+        Materia = materia;
+    }
+}
