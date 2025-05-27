@@ -49,7 +49,7 @@ public class CorsoOnline : Corso
     }
 
     // Costruttore della classe CorsoOnline
-    public CorsoOnline(string _titolo, int _durataOre, string piattaforma, string linkAccesso) : base(_titolo, _durataOre)
+    public CorsoOnline(string _titolo, int _durataOre,List<Studente> studenti, string piattaforma, string linkAccesso) : base(_titolo, _durataOre,studenti)
     {
         Piattaforma = piattaforma;
         LinkAccesso = linkAccesso;

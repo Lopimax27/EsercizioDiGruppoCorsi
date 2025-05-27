@@ -14,7 +14,7 @@ public abstract class Corso
         }
         set
         {
-            value = _studenti;
+            _studenti = value;
         }   
     }
 
@@ -39,7 +39,7 @@ public abstract class Corso
         {
             if (value > 0)
             {
-                value = _durataOre;
+                _durataOre=value;
             }
             else
             {
@@ -51,9 +51,10 @@ public abstract class Corso
     public abstract void ErogaCorso(List<Studente> studenti);
     public abstract void StampaDettagli();
 
-    public Corso(string titolo, int durata)
+    public Corso(string titolo, int durata,List<Studente> studenti)
     {
         Titolo = titolo;
         DuratoOre = durata;
+        Studenti = studenti;
     }
 }

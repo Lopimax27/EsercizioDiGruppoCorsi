@@ -68,7 +68,7 @@ public class CorsoInPresenza : Corso
         Console.WriteLine($"Corso in presenza | Titolo: {Titolo} | Durata ore: {DuratoOre} | Aula: {Aula} | Numero di posti: {NumeroPosti}");
     }
 
-    public CorsoInPresenza(string titolo, int durata, string aula, int numeroPosti) : base(titolo, durata)
+    public CorsoInPresenza(string titolo, int durata,List<Studente> studenti, string aula, int numeroPosti) : base(titolo, durata,studenti)
     {
         Aula = aula;
         NumeroPosti = numeroPosti;

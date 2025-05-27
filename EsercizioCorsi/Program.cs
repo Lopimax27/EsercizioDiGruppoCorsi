@@ -22,6 +22,7 @@
                     break;
                 case 3:
                     ErogaCorsi(corsi);
+                    break;
                 case 4:
                     AggiungiStudente(corsi);
                     break;
@@ -53,7 +54,7 @@
             Console.WriteLine("Inserisci il numero di posti");
             int numero = int.Parse(Console.ReadLine());
 
-            return new CorsoInPresenza(titolo, durata, aula, numero);
+            return new CorsoInPresenza(titolo, durata,new List<Studente>(), aula, numero);
         }
         else if (scelta == 2)
         {
@@ -62,7 +63,7 @@
             Console.WriteLine("Inserisci il link di accesso: ");
             string link = Console.ReadLine();
 
-            return new CorsoOnline(titolo, durata, piattaforma, link);
+            return new CorsoOnline(titolo, durata,new List<Studente>(), piattaforma, link);
         }
         return null;
     }
@@ -73,7 +74,36 @@
 
         Console.WriteLine("Scegli corso:");
         int scelta = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Inserisci nome:");
+        string nome = Console.ReadLine();
 
-        corsi[scelta].ErogaCorso(corsi[scelta].Studenti);
+        Console.WriteLine("Inserisci eta:");
+        int eta = int.Parse(Console.ReadLine());
+
+        corsi[scelta-1].Studenti.Add(new Studente(nome,eta));
     }
+
+    public static void ErogaCorsi(List<Corso> corsi)
+    {
+        int count = 0;
+        foreach (Corso corso in corsi)
+        {
+            Console.WriteLine(count);
+            corso.ErogaCorso(corso.Studenti);
+            count++;
+        }
+    }
+
+    //metodo StampaCorsi
+    public static void StampaCorsi(List<Corso> corsi)
+    {
+        foreach (Corso corso in corsi)
+        {
+            int numeroCorso = corsi.IndexOf(corso) + 1;
+            Console.WriteLine($"{numeroCorso}. ");
+            corso.StampaDettagli();
+        }
+    }
+
 }
