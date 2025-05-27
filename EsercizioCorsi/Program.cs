@@ -1,9 +1,10 @@
-﻿public class Program
+﻿using System;
+
+public class Program
 {
     public static void Main()
     {
         List<Corso> corsi = new List<Corso>();
-        List<Studente> studenti = new List<Studente>();
 
         bool x = true;
 
@@ -22,6 +23,7 @@
                     break;
                 case 3:
                     ErogaCorsi(corsi);
+                    break;
                 case 4:
                     AggiungiStudente(corsi);
                     break;
@@ -46,7 +48,7 @@
         Console.WriteLine("Il corso è online o in presenza 1/2");
         int scelta = int.Parse(Console.ReadLine());
 
-        if (scelta == 1)
+        if (scelta == 2)
         {
             Console.WriteLine("Inserisci l'aula del corso: ");
             string aula = Console.ReadLine();
@@ -55,7 +57,7 @@
 
             return new CorsoInPresenza(titolo, durata, aula, numero);
         }
-        else if (scelta == 2)
+        else if (scelta == 1)
         {
             Console.WriteLine("Inserisci la piattaforma: ");
             string piattaforma = Console.ReadLine();
@@ -74,6 +76,35 @@
         Console.WriteLine("Scegli corso:");
         int scelta = int.Parse(Console.ReadLine());
 
-        corsi[scelta].ErogaCorso(corsi[scelta].Studenti);
+        Console.WriteLine("Inserisci il nome: ");
+        string nome = Console.ReadLine();
+
+        Console.WriteLine("Inserisci l'età: ");
+        int eta = int.Parse(Console.ReadLine());
+
+        corsi[scelta-1].studenti.Add(new Studente(nome,eta));
     }
+    //metodo ErogaCorsi
+    public static void ErogaCorsi(List<Corso> corsi)
+    {
+        int count = 0;
+        foreach (Corso corso in corsi)
+        {
+            Console.WriteLine(count);
+            corso.ErogaCorso(corso.studenti);
+            count++;
+        }
+    }
+
+    //metodo StampaCorsi
+    public static void StampaCorsi(List<Corso> corsi)
+    {
+        foreach (Corso corso in corsi)
+        {
+            int numeroCorso = corsi.IndexOf(corso) + 1;
+            Console.WriteLine($"{numeroCorso}. ");
+            corso.StampaDettagli();
+        }
+    }
+
 }
