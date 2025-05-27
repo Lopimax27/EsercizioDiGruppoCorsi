@@ -21,7 +21,7 @@ public class CorsoOnline : Corso
     public override void ErogaCorso(List<Studente> studenti)
     {
         // Lista studenti locale (vuota, da implementare)
-        
+
         Console.WriteLine("Lista studenti:");
         for (int i = 0; i < studenti.Count; i++)
         {
@@ -54,4 +54,5 @@ public class CorsoOnline : Corso
         Piattaforma = piattaforma;
         LinkAccesso = linkAccesso;
     }
-}
+} 
+//fate il main caspio
